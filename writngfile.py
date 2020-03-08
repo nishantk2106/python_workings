@@ -1,14 +1,12 @@
 fname=input("enter the file name")
-try:
-    fhand=open(fname,)
-except:
-    print("cannot open the file name",fhand)
-    exit()
-
+fhand=open(fname,'w+')
 line1="my name is nishant and i am a student learning python"
-
-fhand.write(line1)
 line2="dfufdgidhgohurehuihrfhfrivhihiuh uw hfuhu heugh uhfivui uihivhivhih"
+fhand.write(line1)
 fhand.write(line2)
+fhand=open(fname,'r')
+for line in fhand:
+    line=line.rstrip()
+    print(line)
 fhand.close()
 
